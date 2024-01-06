@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Zebulon;
+  src: url(resources/fonts/Zebulon/Zebulon.otf);
+}
+
+html {
+  background-color: #222222;
+}
+
+body {
+  font-family: Zebulon, Arial, Helvetica, sans-serif;
+  color: white;
+  /* overflow: hidden; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: block;
+  height: 50px;
+}
+
+.container {
+  display: grid;
+}
+
+.img {
+  display: inline-block;
+  width: 70%;
+  margin: 20px auto;
+  border: 1px solid white;
+}
+
+.menu {
+  height: 30px;
+  align-self: center;
+}
+
+.non-mobile-nav {
+  display: none;
+}
+
+header {
+  position: relative;
+}
+
+.mobile-nav-container {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  position: absolute;
+  /* transform: translateX(100px); */
+  overflow: -moz-hidden-unscrollable;
+  z-index: 4;
+  background-color: black;
+  width: 100vw;
+  height: 100dvh;
+  top: 0;
+  text-align: center;
+  transform: translateY(-200%);
+  transition: all 400ms ease-in-out;
+}
+
+.mobile-nav-link {
+  color: greenyellow;
+}
+
+.mobile-nav-container ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  position: relative;
+}
+
+.mobile-exit-menu {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
+}
+
+.hero-img {
+  display: none;
+}
+
+.hero-txt {
+  text-align: center;
+  font-size: .5rem;
+}
+
+.photos-header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+
+
+
+/* below is the media queries for everything that isn't mobile phones
+============================================================================================================================================================================================================================================================================================================ */
+@media screen and (min-width: 600px) {
+
+  .mobile-nav {
+    display: none;
+  }
+
+  html {
+    position: relative;
+  }
+  
+  body {
+    text-align: center;
+    font-family: Zebulon, Arial, Helvetica, sans-serif;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  header {
+    top: 0px;
+    position: sticky;
+    z-index: 3;
+    background-color: #222222;
+    padding: 5px;
+    border-bottom: 1px solid white;
+  }
+
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border: 1px solid white;
+  }
+  
+  .logo {
+    height: 70px;
+    margin: 0 auto;
+  }
+  
+  nav {
+    text-align: center;
+    display: block;
+    margin-bottom: 70px;
+  }
+  
+  .non-mobile-nav {
+    color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .non-mobile-nav li a {
+    color: white;
+    cursor: pointer;
+    transition: box-shadow 100ms ease-in-out;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .non-mobile-nav li a:visited {
+    color: greenyellow
+  }
+  
+  .non-mobile-nav li a:hover {
+    box-shadow: 0px 0px 20px white;
+    box-shadow: 0px 0px 20px white inset;
+  }
+  
+  .non-mobile-nav li a:active{
+    box-shadow: 0px 0px 20px white;
+    box-shadow: 0px 0px 20px white inset;
+  }
+
+  .hero {
+    margin-bottom: 7rem;
+    position: relative;
+  }
+
+  .hero-img {
+    margin: 0 auto;
+    display: block;
+    width: 100vw;
+  }
+
+  .hero-txt {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    /* border: 1px solid red; */
+    top: 10%;
+    width: auto;
+    padding: 10px;
+    left: 0;
+    text-align: center;
+    text-align: left;
+    font-size: 1.9rem;
+    font-family: Zebulon;
+    letter-spacing: 3px;
+    background-color: rgba(0,0,0,.8);
+
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+}
