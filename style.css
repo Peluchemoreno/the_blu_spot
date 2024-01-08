@@ -13,7 +13,7 @@
 }
 
 html {
-  background-color: #222222;
+  background: linear-gradient(to top, rgb(10, 10, 10), rgb(19, 19, 19), #222222);
   position: relative;
 }
 
@@ -41,6 +41,22 @@ nav {
 
 .container {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+#bongs {
+  width: 85%;
+  grid-area: 4 / span 2;
+}
+
+.cones {
+  align-self: stretch;
 }
 
 .img {
@@ -157,6 +173,7 @@ header {
     margin-top: 50px;
     align-items: center;
     justify-content: space-evenly;
+    font-size: 2rem;
   }
 
   .img {
@@ -237,6 +254,10 @@ header {
 
   h2 {
     font-size: 2rem;
+  }
+
+  .cones {
+    display: none;
   }
 
 }
