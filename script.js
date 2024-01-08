@@ -6,11 +6,13 @@ const body = document.querySelector('body')
 menuOpenbtn.addEventListener('pointerdown', openMenu)
 mobileMenuExit.addEventListener('click', closeMenu)
 
-// mobileMenu.style.display = 'none'
 
 function openMenu(){
-  console.log(mobileMenu)
-  // mobileMenu.style.display = 'block'
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant",
+  });
   body.style.overflow = 'hidden';
   mobileMenu.style.transform = 'translateY(0px)'
 }
